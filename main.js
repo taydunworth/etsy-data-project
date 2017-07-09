@@ -40,7 +40,7 @@ function question3 () {
 // 4: Display a list of all items who are made of wood.
 function question4 () {
   for (i = 0; i < data.length; i++) {
-    if (data[i].materials === "wood") {
+    if (data[i].materials[i] === "wood") {
       console.log(data[i].title + ' is made of wood.');
     }
   }
@@ -48,18 +48,22 @@ function question4 () {
 
 // 5: Which items are made of eight or more materials?
 //    Display the name, number of items and the items it is made of.
+
+// Need to look at array within array; most likely double for loop
 function question5 () {
-  // Answer:
   for (i = 0; i < data.length; i++) {
-    if (data[i].materials >= 8) {
-      console.log(data[i].title);
+    if (data[i].materials) {
+      for (j = 0; j < data[materials].length; j++) {
+        if (data.materials[j] >= 8) {
+                console.log(data[i].title);
+        }
+      }
     }
   }
 }
 
 
 // 6: How many items were made by their sellers?
-// Answer:
 function question6 () {
   let userMade = 0;
   for (i = 0; i < data.length; i++) {
